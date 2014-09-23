@@ -1,0 +1,2 @@
+#show  port information 
+netstat -nutlp | grep 8080 
