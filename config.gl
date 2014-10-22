@@ -1,6 +1,7 @@
 #show  port information 
 netstat -nutlp | grep 8080 
-
+#show all ports information 
+netstat -nutlp
 #find the large file 
 find . -type f -size +1000000k 
 
