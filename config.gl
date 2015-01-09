@@ -35,3 +35,14 @@ git merge (push/fetch name)/master
 git push  
 
 
+[apache traffic server]
+Via code 
+traffic_line -s  proxy.config.http.insert_request_via_str -v 1
+traffic_line -s  proxy.config.http.insert_response_via_str -v 2
+traffic_line -x
+
+配置ats在源服务器没有定义缓存的情况缓存文件
+traffic_line -s proxy.config.http.cache.required_headers -v 0
+traffic_line -x
+
+
