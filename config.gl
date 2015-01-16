@@ -46,3 +46,12 @@ traffic_line -s proxy.config.http.cache.required_headers -v 0
 traffic_line -x
 
 
+[nginx cache]
+proxy_cache:
+
+cache_purge:
+
+
+
+
+
