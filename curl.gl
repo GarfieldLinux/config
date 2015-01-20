@@ -1,0 +1,3 @@
+#curl usage 
+#show HEAD information
+curl --head  http://url.com

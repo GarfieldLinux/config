@@ -16,3 +16,6 @@ make ;make install
 #nginx nginx.conf 
 
 
+#nginx cache purge 
+
+
