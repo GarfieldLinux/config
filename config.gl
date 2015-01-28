@@ -48,6 +48,7 @@ traffic_line -x
 
 [nginx cache]
 proxy_cache:
+nginx通过指令proxy_cache_use_stale来控制在文件过期更新过程的回源请求量，让当一个请求在更新文件时，其他请求则暂时使用过期文件。具体配置为proxy_cache_use_stale updating;
 
 cache_purge:
 
