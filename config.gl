@@ -16,6 +16,10 @@ find . -type f -size +1000000k
 set number
 #显示当前编辑的文件名  
 highlight StatusLine cterm=bold ctermfg=yellow ctermbg=blue
+#查找
+n 查找下一个
+N 查找上一个
+
 
 
 #mysql user root 
