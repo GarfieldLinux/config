@@ -50,6 +50,10 @@ git merge (push/fetch name)/master
 #git push code (your repo)
 git push  
 
+#git 获取代码  不包含.git
+gti archive -format zip -output  master.zip master 
+
+
 
 [apache traffic server]
 Via code 
