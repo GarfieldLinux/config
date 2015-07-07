@@ -8,8 +8,8 @@ find . -type f -size +1000000k
 #ssh 443 port forward 
  ssh -o ServerAliveInterval=60 -i ./pem_file.pem -p 4222 pxie@vmw-sz.gopivotal.com -L 443:10.110.112.216:443 
 
-
-
+#ffmpeg
+ffmpeg -i /var/www/html/19uK7fc_1432122398387_75r8hLB_2.mp4  2>&1 | grep Duration | cut -d ' ' -f 4 | sed s/,//
 
 #vimrc 
 #
