@@ -38,6 +38,9 @@ ESC 进入普通模式，然后
 :%s/.*\S.*$/&A/g
 
 
+#删除包含特定字符的行数据
+:g/testdelstr/d
+
 
 
 #mysql user root 
