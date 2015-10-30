@@ -36,10 +36,29 @@ ESC 进入普通模式，然后
 
 #每行末尾增加A
 :%s/.*\S.*$/&A/g
-
+:%s/.*\S.*$/&A/g
 
 #删除包含特定字符的行数据
 :g/testdelstr/d
+
+#全局替换不可见字符为A
+:'<,'>s/\s/A/g
+
+#向下搜索
+/keywords
+
+#向上搜索
+?keywords
+
+#向下下一个
+Ctrl+n
+
+#向上下一个
+Ctrl+N
+
+#取消高亮
+:nohl
+
 
 
 
@@ -99,4 +118,8 @@ cache_purge:
 ps -eo pid,lstart|grep 4435
 
 
+
+
+#转码
+iconv  -f  gbk   -t UTF-8   src/gnts_logwatch.cpp      -o  gnts_logwatch.cpp
 
