@@ -17,6 +17,8 @@ ffmpeg -i /var/www/html/19uK7fc_1432122398387_75r8hLB_2.mp4  2>&1 | grep Duratio
 set number
 #显示当前编辑的文件名  
 highlight StatusLine cterm=bold ctermfg=yellow ctermbg=blue
+#以只读模式打开文件file.c 并且光标停留在指定12行 
+vim  +12  -M file.c 
 #查找
 n 查找下一个
 N 查找上一个
