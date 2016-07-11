@@ -8,6 +8,10 @@ find . -type f -size +1000000k
 #ssh 443 port forward 
  ssh -o ServerAliveInterval=60 -i ./pem_file.pem -p 4222 pxie@vmw-sz.gopivotal.com -L 443:10.110.112.216:443 
 
+#踢出已经登陆的用户
+pkill -kill -t pts/0
+
+
 #ffmpeg
 ffmpeg -i /var/www/html/19uK7fc_1432122398387_75r8hLB_2.mp4  2>&1 | grep Duration | cut -d ' ' -f 4 | sed s/,//
 
@@ -124,4 +128,15 @@ ps -eo pid,lstart|grep 4435
 
 #转码
 iconv  -f  gbk   -t UTF-8   src/gnts_logwatch.cpp      -o  gnts_logwatch.cpp
+
+
+
+#ffmpeg 工具使用 将input_file.mp4 文件 从10s 处开始切分出 15 s 的片段 
+ffmpeg -ss 00:00:10 -i input_file.mp4 -vcodec copy -acodec copy -t 00:00:15 cool.mp4
+
+
+
+#SHELL 批量删除大量小文件
+find / -name *.tar.gz  | xargs rm -f
+
 
