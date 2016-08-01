@@ -140,3 +140,12 @@ ffmpeg -ss 00:00:10 -i input_file.mp4 -vcodec copy -acodec copy -t 00:00:15 cool
 find / -name *.tar.gz  | xargs rm -f
 
 
+#进程 线程cpu% 调试方法
+ps aux  | grep  processname
+pstack  pid 
+ps  -eLo pid,lwp,pcpu | grep  pid 
+可以找出进程中 哪个线程的哪个函数 占用 cpu 较高 
+ 
+
+
+
