@@ -146,6 +146,7 @@ pstack  pid
 ps  -eLo pid,lwp,pcpu | grep  pid 
 可以找出进程中 哪个线程的哪个函数 占用 cpu 较高 
  
-
+ //清除linux cached 内存
+echo 1 > /proc/sys/vm/drop_caches 
 
 
