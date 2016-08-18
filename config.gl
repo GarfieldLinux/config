@@ -120,7 +120,7 @@ cache_purge:
 
 
 
-#查看进城精确的时间 进程ID 4435
+#查看进程精确的时间 进程ID 4435
 ps -eo pid,lstart|grep 4435
 
 
