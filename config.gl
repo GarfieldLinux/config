@@ -149,4 +149,4 @@ ps  -eLo pid,lwp,pcpu | grep  pid
  //清除linux cached 内存
 echo 1 > /proc/sys/vm/drop_caches 
 
-# test from zhoujiafei
+# test from zhoujiafei  rmbp
