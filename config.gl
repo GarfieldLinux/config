@@ -70,8 +70,10 @@ Ctrl+N
 #取消高亮
 :nohl
 
-
-
+VIM 翻页方式:
+命令模式下：
+    向上翻页：Ctrl + f 或者PageUp键
+    向下翻页 :  Ctrl + b 或者PageDown键
 
 #mysql user root 
 [mysqld] 
