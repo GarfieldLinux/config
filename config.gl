@@ -42,9 +42,6 @@ ESC 进入普通模式，然后
  或者 :1,$s/^M//g 均可
 补充一点：
 ^M是使用 "CTRL-V CTRL-M" 而不是字面上的 ^M
-
-
-
 #每行末尾增加A
 :%s/.*\S.*$/&A/g
 :%s/.*\S.*$/&A/g
@@ -106,7 +103,6 @@ git push
 gti archive -format zip -output  master.zip master 
 
 
-
 [apache traffic server]
 Via code 
 traffic_line -s  proxy.config.http.insert_request_via_str -v 1
@@ -153,7 +149,18 @@ pstack  pid
 ps  -eLo pid,lwp,pcpu | grep  pid 
 可以找出进程中 哪个线程的哪个函数 占用 cpu 较高 
  
- //清除linux cached 内存
+//清除linux cached 内存
 echo 1 > /proc/sys/vm/drop_caches 
 
 # test from zhoujiafei  rmbp
+#
+#
+#
+#ss：查看网络连接的另一种方法
+#ss -t 只显示 TCP 连接。ss -u 用于显示 UDP 连接，-l 参数只会显示监听的端口
+#所有端口为 22（ssh）的连接
+ss state all sport = :ssh
+#只想看已建立的 socket（排除了 listening 和 closed ）
+ss state connected sport = :ssh
+#可以列出指定的 host 或者 ip 段。例如，列出到达 74.125.0.0/16 子网的连接
+ss state all dst 74.125.0.0/16
