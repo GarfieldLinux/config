@@ -1,3 +1,6 @@
 #curl usage 
 #show HEAD information
 curl --head  http://url.com
+
+#自定义curl HTTP 请求
+curl -Lvo /dev/null "http://xxx"  -x 127.0.0.1:80 -H "hhh: 1"  -r 0-1024  -A "UA" 
