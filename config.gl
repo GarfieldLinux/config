@@ -164,3 +164,9 @@ ss state all sport = :ssh
 ss state connected sport = :ssh
 #可以列出指定的 host 或者 ip 段。例如，列出到达 74.125.0.0/16 子网的连接
 ss state all dst 74.125.0.0/16
+
+
+#设置linux 系统时间
+date -s "2007-08-03 14:15:00"
+
+
