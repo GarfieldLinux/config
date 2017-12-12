@@ -170,3 +170,6 @@ ss state all dst 74.125.0.0/16
 date -s "2007-08-03 14:15:00"
 
 
+#awk对某一列求和
+awk '{a+=$1}END{print a}' 
+
