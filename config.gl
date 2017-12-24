@@ -173,3 +173,9 @@ date -s "2007-08-03 14:15:00"
 #awk对某一列求和
 awk '{a+=$1}END{print a}' 
 
+
+Mac  下 安装ats 找不到openssl 的解决方法
+$ cd /usr/local/include
+$ ln -s ../opt/openssl/include/openssl .
+
+
