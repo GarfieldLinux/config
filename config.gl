@@ -179,3 +179,12 @@ $ cd /usr/local/include
 $ ln -s ../opt/openssl/include/openssl .
 
 
+#获取文件的前N行 
+head -100  filename
+#获取文件的末尾n 行 
+tail -100  filename 或 tail -n 100  filename
+#获取文件的中间100-200行
+sed -n '100,200p' filename 
+
+
+
