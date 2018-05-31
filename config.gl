@@ -187,3 +187,18 @@ sed -n '100,200p' filename
 
 
 
+iocore/cache/Cache.cc  line:1378
+allocating 2695168 directory bytes for a 2147467264 byte volume (0.125504%)
+
+iocore/cache/P_CacheVol.h
+ TS_INLINE size_t
+ vol_dirlen(Vol *d)
+ {
+   return vol_headerlen(d) + ROUND_TO_STORE_BLOCK(((size_t)d->buckets) * DIR_DEPTH * d->segments * SIZEOF_DIR) +
+          ROUND_TO_STORE_BLOCK(sizeof(VolHeaderFooter));
+}
+
+
+iocore/cache/CacheDir.cc line:1095
+dir write buf length 
+
