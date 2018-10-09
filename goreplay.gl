@@ -1,0 +1,8 @@
+使用goreplay(Version: 0.16.1) 进行流量copy
+
+./goreplay  -input-raw :80  -output-http="http://192.168.31.192:81"  --http-set-header 'User-Agent: Gor'  -http-original-host
+
+ -input-raw :80 ===> 监听本地80口的请求  
+ -output-http="http://192.168.31.192:81"  ===> 转发请求到目的地址以及端口
+ --http-set-header 'User-Agent: Gor'   ===>  设置请求头
+ -http-original-host    ===>  携带原始HOST 
