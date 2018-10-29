@@ -202,5 +202,8 @@ iocore/cache/P_CacheVol.h
 iocore/cache/CacheDir.cc line:1095
 dir write buf length 
 
+
+iocore/cache/CacheDir.cc  ---> SYNC_MAX_WRITE  1212行 写索引逻辑
+
 追踪CPU 占用
 strace -c  -T -tt -e trace=all -p 31637
