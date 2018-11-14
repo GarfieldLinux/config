@@ -139,4 +139,48 @@ $ tcpdump port 443 or 80 -w http_packets
 $ tcpdump -i eth0 src port not 22
 这会捕获 eth0 上除了 22 号端口的所有通讯。
 
-我们的教程至此就结束了，在本教程中我们讲解了如何安装并使用 tcpdump 来捕获网络数据包。如有任何疑问或建议，欢迎留言。
+
+
+
+
+tcpdump -D
+列出可以抓包的网络接口
+
+
+tcpdump -i eth0 
+对某个接口进行抓包
+
+-c 限制 tcpdump 抓包的数量
+用 -n 选项显示 IP 地址，-nn 选项显示端口号
+
+tcpdump -i any -c5 -nn host 54.204.39.132
+只抓取和显示与 54.204.39.132 有关的数据包
+
+tcpdump -i any -c5 -nn port 80
+抓取和 HTTP 服务相关的数据包
+
+
+tcpdump -i any -c5 -nn src 192.168.122.98
+抓取源 IP 地址为 192.168.122.98 的数据包
+
+tcpdump -i any -c5 -nn dst 192.168.122.98
+使用 dst 就是按目的 IP/主机名来筛选数据包
+
+tcpdump -i any -c5 -nn src 192.168.122.98 and port 80
+筛选来自源 IP 地址 192.168.122.98 的 HTTP 数据包
+
+tcpdump -i any -c5 -nn "port 80 and (src 192.168.122.98 or src 54.204.39.132)"
+我们只抓取了来自源 IP 为 192.168.122.98 或者 54.204.39.132 的 HTTP （端口号80）的数据包。使用该方法就很容易抓取到数据流中交互双方的数据包).
+
+ tcpdump -i any -c10 -nn -A port 80
+ tcpdump 提供了两个选项可以查看数据包内容，-X 以十六进制打印出数据报文内容，-A 打印数据报文的 ASCII 值
+
+ tcpdump -i any -c10 -nn -w webserver.pcap port 80
+-w 选项来保存数据包而不是在屏幕上显示出抓取的数据包
+
+tcpdump -nn -r webserver.pcap
+tcpdump 将数据包保存在二进制文件中，所以不能简单的用文本编辑器去打开它。使用 -r 选项参数来阅读该文件中的报文内容.
+
+tcpdump -nn -r webserver.pcap src 54.204.39.132
+你还可以使用我们讨论过的任何过滤规则来过滤文件中的内容，就像使用实时数据一样。 例如，通过执行以下命令从源 IP 地址 54.204.39.132 检查文件中的数据包
+
