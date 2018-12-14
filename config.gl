@@ -207,3 +207,10 @@ iocore/cache/CacheDir.cc  ---> SYNC_MAX_WRITE  1212行 写索引逻辑
 
 追踪CPU 占用
 strace -c  -T -tt -e trace=all -p 31637
+
+mplayer  fedora29 
+ Can't open audio device /dev/dsp: No such file or directory
+ fix ===> mknod /dev/dsp c 14 3
+          chmod 666 /dev/dsp
+ 
+
