@@ -214,3 +214,8 @@ mplayer  fedora29
           chmod 666 /dev/dsp
  
 
+dig www.baidu.com  +short
+
+
+
+
