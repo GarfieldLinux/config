@@ -1,5 +1,6 @@
 #show  port information 
 netstat -nutlp | grep 8080 
+lsof  -i:65530
 #show all ports information 
 netstat -nutlp
 #find the large file 
