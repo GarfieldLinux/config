@@ -1,0 +1,3 @@
+[submodule "garfield"]
+	path = garfield
+	url = git@github.com:GarfieldLinux/garfield.git
