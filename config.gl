@@ -218,3 +218,4 @@ mplayer  fedora29
 dig www.baidu.com  +short
 
 export GOPROXY=https://goproxy.cn
+export GOPROXY=https://goproxy.io
