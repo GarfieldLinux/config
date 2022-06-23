@@ -80,6 +80,9 @@ mysql
 USE mysql ;
 UPDATE user SET Password = password ( 'new-password' ) WHERE User = 'root' ; 
 
+mysqldump mysql 导入数据: Row size too large (> 8126). Changing some columns to TEXT or BLOB
+解决: 在出现问题的SQL 前执行:  SET SESSION innodb_strict_mode = OFF ;
+
 
 [github]
 #Fetching a remote
