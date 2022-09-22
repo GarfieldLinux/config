@@ -222,3 +222,33 @@ dig www.baidu.com  +short
 
 export GOPROXY=https://goproxy.cn
 export GOPROXY=https://goproxy.io
+
+
+vim 搜索块
+原始内容：
+[2022-09-22 18:41:37 CST] [Info] [/root/rpmbuild/SOURCES/ccci_huawei_obs/apis/logfile.go] [522] [setlogfile 接口到的参数:
+[
+    {
+        "uuid": "ad0-fd8badb15b0-7c60f8ced755086e",
+        "code": "009",
+        "message": "下载成功",
+        "action": "download",
+        "length": 742648,
+        "chunk_num": 0,
+        "md5": "3ac8956c7d7fa17f6868e768085a8f52",
+        "finish_chunk_num": 0,
+        "lines": 0,
+        "time": "2022-09-22 18:41:36"
+    }
+] 节点IP:127.0.0.1]
+
+
+快捷键esc  --->  /ad0-fd8badb15b0-7c60f8ced755086e",\n* *"code": *"009",\n* *"message": "下载成功",\n* *"action": "download", ---> 回车  跨行搜索
+
+
+
+
+
+
+
+
