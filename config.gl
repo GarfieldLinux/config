@@ -11,6 +11,9 @@ find . -type f -size +1000000k
 #踢出已经登陆的用户
 pkill -kill -t pts/0
 
+#查找特定配置文件 匹配字符
+find ./ -type f -name "*.ini" | xargs cat | grep ServerPort | grep 489
+
 
 #ffmpeg
 ffmpeg -i /var/www/html/19uK7fc_1432122398387_75r8hLB_2.mp4  2>&1 | grep Duration | cut -d ' ' -f 4 | sed s/,//
